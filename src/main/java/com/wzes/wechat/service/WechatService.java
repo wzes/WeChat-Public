@@ -33,43 +33,9 @@ public class WechatService {
             textMessage.setMsgType(WechatMessageUtil.MESSAGE_TEXT);
             textMessage.setFromUserName(toUserName);
             textMessage.setCreateTime(System.currentTimeMillis());
-            // 朱世儒
-            if(fromUserName.equals("ovUTEsy50ENpO8ryr54yBQB4WLOY")){
-                if(MESSAGE == 0){
-                    try {
-                        String s = new String(("我可能是喜欢上你了，所以你那天的朋友圈还算数吗？" +
-                                "我可以去追你吗？——来自一个程序员的表白").getBytes(), "iso8859-1");
-                        textMessage.setContent(s);
-                    } catch (UnsupportedEncodingException e) {
-                        e.printStackTrace();
-                    }
-                    MESSAGE++;
-                }else {
-                    try {
-                        String s = new String(("这是一条可爱的消息～～～～请耐心等待～～～" +
-                                "已通知群主～～～～").getBytes(), "iso8859-1");
-                        textMessage.setContent(s);
-                    } catch (UnsupportedEncodingException e) {
-                        e.printStackTrace();
-                    }
-                }
 
-                textMessage.setToUserName("ovUTEsy50ENpO8ryr54yBQB4WLOY");
-                responseMessage = WechatMessageUtil.textMessageToXml(textMessage);
-            }
-            // Derek
-            else if(fromUserName.equals("ovUTEs8RJ7wJUPm_9YI0htjWnkbs")){
-                try {
-                    String s = new String("Go to coding!".getBytes(), "iso8859-1");
-                    textMessage.setContent(s);
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
-                }
-                textMessage.setToUserName("ovUTEs8RJ7wJUPm_9YI0htjWnkbs");
-                responseMessage = WechatMessageUtil.textMessageToXml(textMessage);
-            }
             // 自己
-            else if(fromUserName.equals("ovUTEs2DfbeVY1RaJTzLWZ2mCORU")){
+            if(fromUserName.equals("ovUTEs2DfbeVY1RaJTzLWZ2mCORU")){
                 try {
                     String s = new String(("别给自己发了～～～～～").getBytes(), "iso8859-1");
                     textMessage.setContent(s);
